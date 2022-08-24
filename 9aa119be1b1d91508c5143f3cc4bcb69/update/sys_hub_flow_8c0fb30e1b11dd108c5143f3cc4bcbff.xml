@@ -1,0 +1,3075 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-rome-06-23-2021__patch9a-06-15-2022_07-15-2022_1637.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Create a RITM and REQ to associate with a validation failure.</description>
+        <internal_name>create_validation_ritm_and_req</internal_name>
+        <label_cache>[{"name":"subflow.related_link","label":"Input➛Related Link","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"71f09809-c0f2-4fda-8947-7bc817d35ef4","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"23c2e3c5-fcca-4413-b446-52c87041bee5.html","label":"6➛HTML","reference_display":"HTML","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"049d15bc-c0db-4c45-8c18-e73e04b52a2c"}},{"name":"23c2e3c5-fcca-4413-b446-52c87041bee5.__dont_treat_as_error__","label":"6➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"6bc24165-f19e-4c73-b55b-f1194997798f"}},{"name":"23c2e3c5-fcca-4413-b446-52c87041bee5.__action_status__","label":"6➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD22ccc28b345dc950e45cd48fddfafbe8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"8b32e227-4cf9-4a26-9c3d-524bbeef4ba6"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.description","label":"5➛Request Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"sc_request","column_name":"description"},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.short_description","label":"5➛Request Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sc_request","column_name":"short_description"},{"name":"subflow.failure_instructions","label":"Input➛Failure instructions","reference":"","reference_display":"","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"be6759da-db43-45b7-8b89-0798fa0a97fa"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record","label":"5➛Request Record","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Table","label":"5➛Request Table","reference":"sc_request","reference_display":"Request","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.__action_status__","label":"5➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.__dont_treat_as_error__","label":"5➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.type_of_failure","label":"Input➛Type of failure","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7ec9b26b-a302-404a-831a-39e288a2ee34","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.Record","label":"7➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.Table","label":"7➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.Record","label":"2➛Task Record","reference":"task","reference_display":"Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.Table","label":"2➛Task Table","reference":"task","reference_display":"Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.failure_record_display_value","label":"Input➛Failure Record Display Value","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c1e34c32-6bba-415d-9c74-91a42fd7da3b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.short_description","label":"Flow Variables➛Short Description","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a3b6eaad-d765-444c-ac0e-508dd7e5d8de"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.Record","label":"8➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.Table","label":"8➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.__action_status__","label":"8➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.__dont_treat_as_error__","label":"8➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>3d5721361bdd91508c5143f3cc4bcb16</master_snapshot>
+        <name>Create Validation Failure RITM, REQ, and Task</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-15 18:54:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8c0fb30e1b11dd108c5143f3cc4bcbff</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Create Validation Failure RITM, REQ, and Task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LDAP Sync Customizations" source="1391cf861b999d108c5143f3cc4bcbed">1391cf861b999d108c5143f3cc4bcbed</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name>sys_hub_flow_8c0fb30e1b11dd108c5143f3cc4bcbff</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:06</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff^id=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</claim_owner_scope>
+        <claim_timestamp>182ac3e80bc0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_8c0fb30e1b11dd108c5143f3cc4bcbff</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Record Validation Processes</previous_claim_name>
+        <previous_claim_scope>9aa119be1b1d91508c5143f3cc4bcb69</previous_claim_scope>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:39:13</sys_created_on>
+        <sys_id>2db795f61b5d91508c5143f3cc4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 14:39:13</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</claim_owner_scope>
+        <claim_timestamp>182ac3e80a80000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_8c0fb30e1b11dd108c5143f3cc4bcbff</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>LDAP Sync Customizations</previous_claim_name>
+        <previous_claim_scope>1391cf861b999d108c5143f3cc4bcbed</previous_claim_scope>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:39:13</sys_created_on>
+        <sys_id>edb795f61b5d91508c5143f3cc4bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 14:39:13</sys_updated_on>
+    </sys_claim>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN000ff70e1b11dd108c5143f3cc4bcb86"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8c0fb30e1b11dd108c5143f3cc4bcbff</id>
+        <name>Create Validation RITM and REQ</name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-15 18:54:41</sys_created_on>
+        <sys_id>000ff70e1b11dd108c5143f3cc4bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-15 18:54:41</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=000ff70e1b11dd108c5143f3cc4bcb86"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN22f281b01ba9159062e50ed2cd4bcb5d,42c0597e1b1d91508c5143f3cc4bcb77,45e6a1f21bdd91508c5143f3cc4bcbdd,9451d67e1b55d1508c5143f3cc4bcb55"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c1e34c32-6bba-415d-9c74-91a42fd7da3b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>failure_record_display_value</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Failure Record Display Value</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:16:28</sys_created_on>
+        <sys_id>22f281b01ba9159062e50ed2cd4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:16:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7ec9b26b-a302-404a-831a-39e288a2ee34</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>type_of_failure</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Type of failure</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:08:56</sys_created_on>
+        <sys_id>42c0597e1b1d91508c5143f3cc4bcb77</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:43:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=be6759da-db43-45b7-8b89-0798fa0a97fa</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>failure_instructions</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Failure instructions</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:45:32</sys_created_on>
+        <sys_id>45e6a1f21bdd91508c5143f3cc4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:45:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=71f09809-c0f2-4fda-8947-7bc817d35ef4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>related_link</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Related Link</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:50:55</sys_created_on>
+        <sys_id>9451d67e1b55d1508c5143f3cc4bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:50:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN3a5849341be9159062e50ed2cd4bcb88,74476df21bdd91508c5143f3cc4bcb5d,f0476df21bdd91508c5143f3cc4bcb51"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=38a81d6f-d548-45cb-9e42-419c01a9581f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table>sc_task</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Task Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_task">sc_task</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:39:59</sys_created_on>
+        <sys_id>3a5849341be9159062e50ed2cd4bcb88</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:39:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=c4c02adb-7665-405c-bf2e-ed1cafc2bba9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:10</sys_created_on>
+        <sys_id>74476df21bdd91508c5143f3cc4bcb5d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=768366d2-e1a2-4fc7-9af5-dc8b193b6a56</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table>sc_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_request">sc_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:10</sys_created_on>
+        <sys_id>f0476df21bdd91508c5143f3cc4bcb51</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN11fa8c9a1b51dd108c5143f3cc4bcbc0,25c216321b95d1508c5143f3cc4bcb5f,49e6a1f21bdd91508c5143f3cc4bcbec,823349b01ba9159062e50ed2cd4bcb19,f46709701be9159062e50ed2cd4bcbc8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment>Create REQ</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-15 19:46:55</sys_created_on>
+        <sys_id>11fa8c9a1b51dd108c5143f3cc4bcbc0</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-24 14:56:22</sys_updated_on>
+        <ui_id>e9a7219f-af7a-4c56-a4e5-6fc8a42ca300</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=11fa8c9a1b51dd108c5143f3cc4bcbc0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>11fa8c9a1b51dd108c5143f3cc4bcbc0</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:08:57</sys_created_on>
+        <sys_id>86c01d7e1b1d91508c5143f3cc4bcbd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 14:08:57</sys_updated_on>
+        <value>sc_request</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>11fa8c9a1b51dd108c5143f3cc4bcbc0</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:08:57</sys_created_on>
+        <sys_id>8ec01d7e1b1d91508c5143f3cc4bcbd0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:43:28</sys_updated_on>
+        <value/>
+        <variable display_value="Field Values">273a6335531003003bf1d9109ec5876b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=11fa8c9a1b51dd108c5143f3cc4bcbc0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>11fa8c9a1b51dd108c5143f3cc4bcbc0</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:08:57</sys_created_on>
+        <sys_id>06c01d7e1b1d91508c5143f3cc4bcbd0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>stage=delivery^short_description={{flow_variable.short_description}}^description={{subflow.failure_instructions}}^requested_for={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^opened_by={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>11fa8c9a1b51dd108c5143f3cc4bcbc0</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:08:57</sys_created_on>
+        <sys_id>4ec01d7e1b1d91508c5143f3cc4bcbcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 14:08:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=11fa8c9a1b51dd108c5143f3cc4bcbc0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=11fa8c9a1b51dd108c5143f3cc4bcbc0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Build HTML Card">92ccc28b1b5dc9508c5143f3cc4bcb94</action_type>
+        <action_type_parent/>
+        <comment>Build related link card</comment>
+        <compiled_snapshot>92ccc28b1b5dc9508c5143f3cc4bcb94</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <order>6</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:16</sys_created_on>
+        <sys_id>25c216321b95d1508c5143f3cc4bcb5f</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-24 14:56:22</sys_updated_on>
+        <ui_id>23c2e3c5-fcca-4413-b446-52c87041bee5</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=25c216321b95d1508c5143f3cc4bcb5f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>25c216321b95d1508c5143f3cc4bcb5f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:16</sys_created_on>
+        <sys_id>25c216321b95d1508c5143f3cc4bcb62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:16</sys_updated_on>
+        <value>Related Link</value>
+        <variable display_value="Title">9eccc28b1b5dc9508c5143f3cc4bcb9b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>25c216321b95d1508c5143f3cc4bcb5f</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:16</sys_created_on>
+        <sys_id>2dc216321b95d1508c5143f3cc4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:16</sys_updated_on>
+        <value>&lt;p&gt;See related link for details.&lt;/p&gt;</value>
+        <variable display_value="Body">92ccc28b1b5dc9508c5143f3cc4bcbac</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=25c216321b95d1508c5143f3cc4bcb5f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>body</field>
+        <id>25c216321b95d1508c5143f3cc4bcb5f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:16</sys_created_on>
+        <sys_id>e5c216321b95d1508c5143f3cc4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>25c216321b95d1508c5143f3cc4bcb5f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:16</sys_created_on>
+        <sys_id>a9c216321b95d1508c5143f3cc4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>urls</field>
+        <id>25c216321b95d1508c5143f3cc4bcb5f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:16</sys_created_on>
+        <sys_id>21c216321b95d1508c5143f3cc4bcb61</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-24 14:56:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value>{"version":"1.0","complexObject":{"name$":"FD12ccc28b205dc9500b06ca565e61a798","$COCollectionField":[{"Label":{"$cv":{"$c":"java.lang.String","$v":"Related Link"}},"URL":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"complexObjectSchema":{"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798":{"$COCollectionField":[{"URLs_child0":{"Label":"String","Label.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Label\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"URL":"String","URL.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].URL\\\":\\\"{{subflow.related_link}}\\\"}\",\"default_value\":\"\",\"label\":\"URL\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"}},"serializationFormat":"JSON"}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=25c216321b95d1508c5143f3cc4bcb5f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=25c216321b95d1508c5143f3cc4bcb5f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment>Create RITM</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <order>7</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:45:32</sys_created_on>
+        <sys_id>49e6a1f21bdd91508c5143f3cc4bcbec</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-24 14:56:22</sys_updated_on>
+        <ui_id>5d8a3086-7f55-4c76-a845-1454901b9512</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=49e6a1f21bdd91508c5143f3cc4bcbec"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>49e6a1f21bdd91508c5143f3cc4bcbec</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:45:32</sys_created_on>
+        <sys_id>c5e6a1f21bdd91508c5143f3cc4bcbee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:45:32</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=49e6a1f21bdd91508c5143f3cc4bcbec"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>49e6a1f21bdd91508c5143f3cc4bcbec</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:45:32</sys_created_on>
+        <sys_id>45e6a1f21bdd91508c5143f3cc4bcbee</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:17</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>stage=delivery^short_description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.short_description}}^description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.description}}^assignment_group={"display":"AG_FieldSupportLevel2","value":"1692db791b7d2410622b32ac0a4bcb77"}^request={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record}}^requested_for={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^opened_by={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^work_notes=[code]{{23c2e3c5-fcca-4413-b446-52c87041bee5.html}}[/code]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>49e6a1f21bdd91508c5143f3cc4bcbec</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:45:32</sys_created_on>
+        <sys_id>8de6a1f21bdd91508c5143f3cc4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:45:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=49e6a1f21bdd91508c5143f3cc4bcbec"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=49e6a1f21bdd91508c5143f3cc4bcbec"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment>Look up existing failure records</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:17:32</sys_created_on>
+        <sys_id>823349b01ba9159062e50ed2cd4bcb19</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-24 14:56:22</sys_updated_on>
+        <ui_id>07c4bafe-f915-431b-98bd-8aa0f65f6e92</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=823349b01ba9159062e50ed2cd4bcb19"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>823349b01ba9159062e50ed2cd4bcb19</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:17:32</sys_created_on>
+        <sys_id>423349b01ba9159062e50ed2cd4bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:17:32</sys_updated_on>
+        <value>task</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>823349b01ba9159062e50ed2cd4bcb19</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>81d6c9fc1ba9159062e50ed2cd4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Don't fail on error">ceab42a673110010d70877186bf6a74f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>823349b01ba9159062e50ed2cd4bcb19</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:17:32</sys_created_on>
+        <sys_id>8a3349b01ba9159062e50ed2cd4bcb1b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <value/>
+        <variable display_value="Conditions">d509f99587003300663ca1bb36cb0ba9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=823349b01ba9159062e50ed2cd4bcb19"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>823349b01ba9159062e50ed2cd4bcb19</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:17:32</sys_created_on>
+        <sys_id>423349b01ba9159062e50ed2cd4bcb1b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>short_description={{flow_variable.short_description}}^active=true</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>823349b01ba9159062e50ed2cd4bcb19</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:17:32</sys_created_on>
+        <sys_id>0a3349b01ba9159062e50ed2cd4bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:17:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__snc_dont_fail_on_error</field>
+        <id>823349b01ba9159062e50ed2cd4bcb19</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>c5d6c9fc1ba9159062e50ed2cd4bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=823349b01ba9159062e50ed2cd4bcb19"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=823349b01ba9159062e50ed2cd4bcb19"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment>Create Task</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <order>8</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:45</sys_created_on>
+        <sys_id>f46709701be9159062e50ed2cd4bcbc8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-24 14:56:22</sys_updated_on>
+        <ui_id>e4c72116-3934-4246-a469-8b5512056240</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f46709701be9159062e50ed2cd4bcbc8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f46709701be9159062e50ed2cd4bcbc8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:45</sys_created_on>
+        <sys_id>306709701be9159062e50ed2cd4bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:45</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait">ff3a6335531003003bf1d9109ec58777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f46709701be9159062e50ed2cd4bcbc8</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:45</sys_created_on>
+        <sys_id>f06709701be9159062e50ed2cd4bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:45</sys_updated_on>
+        <value>sc_task</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f46709701be9159062e50ed2cd4bcbc8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>f46709701be9159062e50ed2cd4bcbc8</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:45</sys_created_on>
+        <sys_id>bc6709701be9159062e50ed2cd4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:45</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>state=1^assignment_group={"display":"AG_FieldSupportLevel2","value":"1692db791b7d2410622b32ac0a4bcb77"}^short_description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.short_description}}^description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.description}}^opened_by={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>f46709701be9159062e50ed2cd4bcbc8</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:45</sys_created_on>
+        <sys_id>f86709701be9159062e50ed2cd4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:45</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>f46709701be9159062e50ed2cd4bcbc8</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:45</sys_created_on>
+        <sys_id>386709701be9159062e50ed2cd4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:45</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f46709701be9159062e50ed2cd4bcbc8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f46709701be9159062e50ed2cd4bcbc8"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN09d6c9fc1ba9159062e50ed2cd4bcb0d,3557edf21bdd91508c5143f3cc4bcbd9,4dd6c9fc1ba9159062e50ed2cd4bcb26,c9d6c9fc1ba9159062e50ed2cd4bcb22"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8dd6c9fc1ba9159062e50ed2cd4bcb0c</block>
+        <comment>Set short description</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>short_description</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>09d6c9fc1ba9159062e50ed2cd4bcb0d</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:06</sys_updated_on>
+        <ui_id>b516560d-619a-4fec-9ee4-9bb15a6993a6</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=09d6c9fc1ba9159062e50ed2cd4bcb0d"/>
+    <sys_element_mapping action="delete_multiple" query="id=09d6c9fc1ba9159062e50ed2cd4bcb0d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>short_description</field>
+        <id>09d6c9fc1ba9159062e50ed2cd4bcb0d</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>09d6c9fc1ba9159062e50ed2cd4bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_8c0fb30e1b11dd108c5143f3cc4bcbff</table>
+        <value>APi Connect Record Validation Failure - {{subflow.type_of_failure}} - {{subflow.failure_record_display_value}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff^id=09d6c9fc1ba9159062e50ed2cd4bcb0d"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=09d6c9fc1ba9159062e50ed2cd4bcb0d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=09d6c9fc1ba9159062e50ed2cd4bcb0d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7957edf21bdd91508c5143f3cc4bcbd8</block>
+        <comment>Set REQ and RITM outputs</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned>request_record,request_item_record,task_record</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:30</sys_created_on>
+        <sys_id>3557edf21bdd91508c5143f3cc4bcbd9</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:06</sys_updated_on>
+        <ui_id>d027d04c-6c86-425a-b187-7cff5a1ca68e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=3557edf21bdd91508c5143f3cc4bcbd9"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8c0fb30e1b11dd108c5143f3cc4bcbff^id=3557edf21bdd91508c5143f3cc4bcbd9"/>
+    <sys_element_mapping action="delete_multiple" query="id=3557edf21bdd91508c5143f3cc4bcbd9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_item_record</field>
+        <id>3557edf21bdd91508c5143f3cc4bcbd9</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:30</sys_created_on>
+        <sys_id>3157edf21bdd91508c5143f3cc4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</table>
+        <value>{{5d8a3086-7f55-4c76-a845-1454901b9512.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_record</field>
+        <id>3557edf21bdd91508c5143f3cc4bcbd9</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:30</sys_created_on>
+        <sys_id>f157edf21bdd91508c5143f3cc4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:30</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</table>
+        <value>{{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_record</field>
+        <id>3557edf21bdd91508c5143f3cc4bcbd9</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:39:59</sys_created_on>
+        <sys_id>c75849341be9159062e50ed2cd4bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:39:59</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</table>
+        <value>{{e4c72116-3934-4246-a469-8b5512056240.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=3557edf21bdd91508c5143f3cc4bcbd9"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3557edf21bdd91508c5143f3cc4bcbd9"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">c5d6c9fc1ba9159062e50ed2cd4bcb26</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>810b6343-a5dc-4a06-9dae-3e25e890cb23</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>4dd6c9fc1ba9159062e50ed2cd4bcb26</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:06</sys_updated_on>
+        <ui_id>491a63b6-35a4-4474-ab5e-da37e24bf8c1</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4dd6c9fc1ba9159062e50ed2cd4bcb26"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8c0fb30e1b11dd108c5143f3cc4bcbff^id=4dd6c9fc1ba9159062e50ed2cd4bcb26"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff^id=4dd6c9fc1ba9159062e50ed2cd4bcb26"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4dd6c9fc1ba9159062e50ed2cd4bcb26"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4dd6c9fc1ba9159062e50ed2cd4bcb26"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">45d6c9fc1ba9159062e50ed2cd4bcb22</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>c9d6c9fc1ba9159062e50ed2cd4bcb22</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:06</sys_updated_on>
+        <ui_id>810b6343-a5dc-4a06-9dae-3e25e890cb23</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c9d6c9fc1ba9159062e50ed2cd4bcb22"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>c9d6c9fc1ba9159062e50ed2cd4bcb22</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>41d6c9fc1ba9159062e50ed2cd4bcb26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <value>existing records exist</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_8c0fb30e1b11dd108c5143f3cc4bcbff^id=c9d6c9fc1ba9159062e50ed2cd4bcb22"/>
+    <sys_element_mapping action="delete_multiple" query="id=c9d6c9fc1ba9159062e50ed2cd4bcb22"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c9d6c9fc1ba9159062e50ed2cd4bcb22</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>cdd6c9fc1ba9159062e50ed2cd4bcb25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{07c4bafe-f915-431b-98bd-8aa0f65f6e92.error_message}}=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>c9d6c9fc1ba9159062e50ed2cd4bcb22</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:18</sys_created_on>
+        <sys_id>0dd6c9fc1ba9159062e50ed2cd4bcb25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:18</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff^id=c9d6c9fc1ba9159062e50ed2cd4bcb22"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c9d6c9fc1ba9159062e50ed2cd4bcb22"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c9d6c9fc1ba9159062e50ed2cd4bcb22"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT INb243c9b01ba9159062e50ed2cd4bcb89"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=a3b6eaad-d765-444c-ac0e-508dd7e5d8de</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>short_description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Short Description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</model>
+        <model_id>8c0fb30e1b11dd108c5143f3cc4bcbff</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:17:51</sys_created_on>
+        <sys_id>b243c9b01ba9159062e50ed2cd4bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Short Description</sys_name>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_b243c9b01ba9159062e50ed2cd4bcb89</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:17:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN46c01d7e1b1d91508c5143f3cc4bcbca,49e6a1f21bdd91508c5143f3cc4bcbe2,a851d67e1b55d1508c5143f3cc4bcb5a,aef281b01ba9159062e50ed2cd4bcb6e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>type_of_failure</element>
+        <help/>
+        <hint/>
+        <label>Type of failure</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 14:08:57</sys_created_on>
+        <sys_id>46c01d7e1b1d91508c5143f3cc4bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="LDAP Sync Customizations" source="1391cf861b999d108c5143f3cc4bcbed">1391cf861b999d108c5143f3cc4bcbed</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LDAP Sync Customizations">1391cf861b999d108c5143f3cc4bcbed</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 14:08:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>failure_instructions</element>
+        <help/>
+        <hint/>
+        <label>Failure instructions</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:45:32</sys_created_on>
+        <sys_id>49e6a1f21bdd91508c5143f3cc4bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:45:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>related_link</element>
+        <help/>
+        <hint/>
+        <label>Related Link</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:50:55</sys_created_on>
+        <sys_id>a851d67e1b55d1508c5143f3cc4bcb5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:50:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>failure_record_display_value</element>
+        <help/>
+        <hint/>
+        <label>Failure Record Display Value</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:16:28</sys_created_on>
+        <sys_id>aef281b01ba9159062e50ed2cd4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:16:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN325849341be9159062e50ed2cd4bcb93,bc476df21bdd91508c5143f3cc4bcb5b,c9476df21bdd91508c5143f3cc4bcb66"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>task_record</element>
+        <help/>
+        <hint/>
+        <label>Task Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:39:59</sys_created_on>
+        <sys_id>325849341be9159062e50ed2cd4bcb93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:39:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_record</element>
+        <help/>
+        <hint/>
+        <label>Request Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:10</sys_created_on>
+        <sys_id>bc476df21bdd91508c5143f3cc4bcb5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item_record</element>
+        <help/>
+        <hint/>
+        <label>Request Item Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:10</sys_created_on>
+        <sys_id>c9476df21bdd91508c5143f3cc4bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=8c0fb30e1b11dd108c5143f3cc4bcbff"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=8c0fb30e1b11dd108c5143f3cc4bcbff^sys_idNOT IN925721361bdd91508c5143f3cc4bcbf3"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"925721361bdd91508c5143f3cc4bcbf3","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</plan_id>
+        <snapshot>78ce9d0d1ba5d1908c5143f3cc4bcbcc</snapshot>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>925721361bdd91508c5143f3cc4bcbf3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:06</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Create a RITM and REQ to associate with a validation failure.</description>
+        <internal_name>create_validation_failure_ritm_and_req</internal_name>
+        <label_cache>[{"name":"subflow.related_link","label":"Input➛Related Link","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"71f09809-c0f2-4fda-8947-7bc817d35ef4","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"23c2e3c5-fcca-4413-b446-52c87041bee5.html","label":"6➛HTML","reference_display":"HTML","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"049d15bc-c0db-4c45-8c18-e73e04b52a2c"}},{"name":"23c2e3c5-fcca-4413-b446-52c87041bee5.__dont_treat_as_error__","label":"6➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"6bc24165-f19e-4c73-b55b-f1194997798f"}},{"name":"23c2e3c5-fcca-4413-b446-52c87041bee5.__action_status__","label":"6➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD22ccc28b345dc950e45cd48fddfafbe8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"8b32e227-4cf9-4a26-9c3d-524bbeef4ba6"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.description","label":"5➛Request Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"sc_request","column_name":"description"},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.short_description","label":"5➛Request Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sc_request","column_name":"short_description"},{"name":"subflow.failure_instructions","label":"Input➛Failure instructions","reference":"","reference_display":"","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"be6759da-db43-45b7-8b89-0798fa0a97fa"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record","label":"5➛Request Record","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Table","label":"5➛Request Table","reference":"sc_request","reference_display":"Request","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.__action_status__","label":"5➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.__dont_treat_as_error__","label":"5➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.type_of_failure","label":"Input➛Type of failure","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7ec9b26b-a302-404a-831a-39e288a2ee34","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.Record","label":"7➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.Table","label":"7➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5d8a3086-7f55-4c76-a845-1454901b9512.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.Record","label":"2➛Task Record","reference":"task","reference_display":"Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.Table","label":"2➛Task Table","reference":"task","reference_display":"Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"07c4bafe-f915-431b-98bd-8aa0f65f6e92.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.failure_record_display_value","label":"Input➛Failure Record Display Value","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c1e34c32-6bba-415d-9c74-91a42fd7da3b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.short_description","label":"Flow Variables➛Short Description","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a3b6eaad-d765-444c-ac0e-508dd7e5d8de"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.Record","label":"8➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.Table","label":"8➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.__action_status__","label":"8➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e4c72116-3934-4246-a469-8b5512056240.__dont_treat_as_error__","label":"8➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Create Validation Failure RITM, REQ, and Task</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Create Validation Failure RITM, REQ, and Task">8c0fb30e1b11dd108c5143f3cc4bcbff</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3d5721361bdd91508c5143f3cc4bcb16</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16^id=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN315721361bdd91508c5143f3cc4bcb18"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3d5721361bdd91508c5143f3cc4bcb16</id>
+        <name>Create Validation Failure RITM and REQ</name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>315721361bdd91508c5143f3cc4bcb18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=315721361bdd91508c5143f3cc4bcb18"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN34511a7e1b55d1508c5143f3cc4bcb2a,465721361bdd91508c5143f3cc4bcb75,755721361bdd91508c5143f3cc4bcb19,fdd64dfc1ba9159062e50ed2cd4bcba2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=71f09809-c0f2-4fda-8947-7bc817d35ef4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>related_link</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Related Link</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:50:56</sys_created_on>
+        <sys_id>34511a7e1b55d1508c5143f3cc4bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:50:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=be6759da-db43-45b7-8b89-0798fa0a97fa</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>failure_instructions</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Failure instructions</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>465721361bdd91508c5143f3cc4bcb75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7ec9b26b-a302-404a-831a-39e288a2ee34</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>type_of_failure</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Type of failure</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>755721361bdd91508c5143f3cc4bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c1e34c32-6bba-415d-9c74-91a42fd7da3b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>failure_record_display_value</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Failure Record Display Value</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:21</sys_created_on>
+        <sys_id>fdd64dfc1ba9159062e50ed2cd4bcba2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN025721361bdd91508c5143f3cc4bcbac,ca5721361bdd91508c5143f3cc4bcb81,f358c9341be9159062e50ed2cd4bcb91"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=c4c02adb-7665-405c-bf2e-ed1cafc2bba9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>025721361bdd91508c5143f3cc4bcbac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=768366d2-e1a2-4fc7-9af5-dc8b193b6a56</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table>sc_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_request">sc_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>ca5721361bdd91508c5143f3cc4bcb81</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=38a81d6f-d548-45cb-9e42-419c01a9581f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table>sc_task</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Task Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_task">sc_task</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:40:03</sys_created_on>
+        <sys_id>f358c9341be9159062e50ed2cd4bcb91</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN06c256321b95d1508c5143f3cc4bcb40,796789701be9159062e50ed2cd4bcb0f,79d64dfc1ba9159062e50ed2cd4bcbe2,8e5721361bdd91508c5143f3cc4bcbdc,ca5721361bdd91508c5143f3cc4bcbd6"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Build HTML Card">92ccc28b1b5dc9508c5143f3cc4bcb94</action_type>
+        <action_type_parent display_value="Build HTML Card">72244e4b1b1dc9508c5143f3cc4bcb72</action_type_parent>
+        <comment>Build related link card</comment>
+        <compiled_snapshot>92ccc28b1b5dc9508c5143f3cc4bcb94</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <order>6</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:19</sys_created_on>
+        <sys_id>06c256321b95d1508c5143f3cc4bcb40</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>23c2e3c5-fcca-4413-b446-52c87041bee5</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=06c256321b95d1508c5143f3cc4bcb40"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>06c256321b95d1508c5143f3cc4bcb40</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:19</sys_created_on>
+        <sys_id>02c256321b95d1508c5143f3cc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:19</sys_updated_on>
+        <value>Related Link</value>
+        <variable display_value="Title">9eccc28b1b5dc9508c5143f3cc4bcb9b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>06c256321b95d1508c5143f3cc4bcb40</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:19</sys_created_on>
+        <sys_id>4ec256321b95d1508c5143f3cc4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:19</sys_updated_on>
+        <value>&lt;p&gt;See related link for details.&lt;/p&gt;</value>
+        <variable display_value="Body">92ccc28b1b5dc9508c5143f3cc4bcbac</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=06c256321b95d1508c5143f3cc4bcb40"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>body</field>
+        <id>06c256321b95d1508c5143f3cc4bcb40</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:19</sys_created_on>
+        <sys_id>0ac256321b95d1508c5143f3cc4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>06c256321b95d1508c5143f3cc4bcb40</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:19</sys_created_on>
+        <sys_id>cac256321b95d1508c5143f3cc4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>urls</field>
+        <id>06c256321b95d1508c5143f3cc4bcb40</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:57:19</sys_created_on>
+        <sys_id>46c256321b95d1508c5143f3cc4bcb41</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value>{"version":"1.0","complexObject":{"name$":"FD12ccc28b205dc9500b06ca565e61a798","$COCollectionField":[{"Label":{"$cv":{"$c":"java.lang.String","$v":"Related Link"}},"URL":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798":{"$COCollectionField":[{"URLs_child0":{"Label":"String","Label.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Label\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"URL":"String","URL.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].URL\\\":\\\"{{subflow.related_link}}\\\"}\",\"default_value\":\"\",\"label\":\"URL\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"}}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=06c256321b95d1508c5143f3cc4bcb40"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=06c256321b95d1508c5143f3cc4bcb40"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Create Task</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <order>8</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:48</sys_created_on>
+        <sys_id>796789701be9159062e50ed2cd4bcb0f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>e4c72116-3934-4246-a469-8b5512056240</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=796789701be9159062e50ed2cd4bcb0f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>796789701be9159062e50ed2cd4bcb0f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:48</sys_created_on>
+        <sys_id>756789701be9159062e50ed2cd4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:48</sys_updated_on>
+        <value>sc_task</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>796789701be9159062e50ed2cd4bcb0f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:48</sys_created_on>
+        <sys_id>b16789701be9159062e50ed2cd4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:48</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait">ff3a6335531003003bf1d9109ec58777</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=796789701be9159062e50ed2cd4bcb0f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>796789701be9159062e50ed2cd4bcb0f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:48</sys_created_on>
+        <sys_id>316789701be9159062e50ed2cd4bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>state=1^assignment_group={"display":"AG_FieldSupportLevel2","value":"1692db791b7d2410622b32ac0a4bcb77"}^short_description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.short_description}}^description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.description}}^opened_by={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>796789701be9159062e50ed2cd4bcb0f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:48</sys_created_on>
+        <sys_id>7d6789701be9159062e50ed2cd4bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait</field>
+        <id>796789701be9159062e50ed2cd4bcb0f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:35:48</sys_created_on>
+        <sys_id>b96789701be9159062e50ed2cd4bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:35:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=796789701be9159062e50ed2cd4bcb0f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=796789701be9159062e50ed2cd4bcb0f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment>Look up existing failure records</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>79d64dfc1ba9159062e50ed2cd4bcbe2</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>07c4bafe-f915-431b-98bd-8aa0f65f6e92</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=79d64dfc1ba9159062e50ed2cd4bcbe2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>79d64dfc1ba9159062e50ed2cd4bcbe2</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>3dd64dfc1ba9159062e50ed2cd4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Don't fail on error">ceab42a673110010d70877186bf6a74f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>79d64dfc1ba9159062e50ed2cd4bcbe2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>fdd64dfc1ba9159062e50ed2cd4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <value>task</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=79d64dfc1ba9159062e50ed2cd4bcbe2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>79d64dfc1ba9159062e50ed2cd4bcbe2</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>f5d64dfc1ba9159062e50ed2cd4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>short_description={{flow_variable.short_description}}^active=true</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>79d64dfc1ba9159062e50ed2cd4bcbe2</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>b9d64dfc1ba9159062e50ed2cd4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__snc_dont_fail_on_error</field>
+        <id>79d64dfc1ba9159062e50ed2cd4bcbe2</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>35d64dfc1ba9159062e50ed2cd4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=79d64dfc1ba9159062e50ed2cd4bcbe2"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=79d64dfc1ba9159062e50ed2cd4bcbe2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Create RITM</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <order>7</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>8e5721361bdd91508c5143f3cc4bcbdc</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>5d8a3086-7f55-4c76-a845-1454901b9512</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8e5721361bdd91508c5143f3cc4bcbdc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8e5721361bdd91508c5143f3cc4bcbdc</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>065721361bdd91508c5143f3cc4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:32</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8e5721361bdd91508c5143f3cc4bcbdc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>8e5721361bdd91508c5143f3cc4bcbdc</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>825721361bdd91508c5143f3cc4bcbde</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:57:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>stage=delivery^short_description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.short_description}}^description={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record.description}}^assignment_group={"display":"AG_FieldSupportLevel2","value":"1692db791b7d2410622b32ac0a4bcb77"}^request={{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record}}^requested_for={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^opened_by={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^work_notes=[code]{{23c2e3c5-fcca-4413-b446-52c87041bee5.html}}[/code]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>8e5721361bdd91508c5143f3cc4bcbdc</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>ce5721361bdd91508c5143f3cc4bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8e5721361bdd91508c5143f3cc4bcbdc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8e5721361bdd91508c5143f3cc4bcbdc"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment>Create REQ</comment>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>ca5721361bdd91508c5143f3cc4bcbd6</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>e9a7219f-af7a-4c56-a4e5-6fc8a42ca300</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ca5721361bdd91508c5143f3cc4bcbd6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ca5721361bdd91508c5143f3cc4bcbd6</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>425721361bdd91508c5143f3cc4bcbd8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:32</sys_updated_on>
+        <value>sc_request</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ca5721361bdd91508c5143f3cc4bcbd6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>ca5721361bdd91508c5143f3cc4bcbd6</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>ce5721361bdd91508c5143f3cc4bcbd7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>stage=delivery^short_description={{flow_variable.short_description}}^description={{subflow.failure_instructions}}^requested_for={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^opened_by={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_table</field>
+        <id>ca5721361bdd91508c5143f3cc4bcbd6</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>0e5721361bdd91508c5143f3cc4bcbd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ca5721361bdd91508c5143f3cc4bcbd6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ca5721361bdd91508c5143f3cc4bcbd6"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN025721361bdd91508c5143f3cc4bcbcc,42d64dfc1ba9159062e50ed2cd4bcbec,42d64dfc1ba9159062e50ed2cd4bcbf0,42d64dfc1ba9159062e50ed2cd4bcbf4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7957edf21bdd91508c5143f3cc4bcbd8</block>
+        <comment>Set REQ and RITM outputs</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned>request_record,request_item_record,task_record</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>025721361bdd91508c5143f3cc4bcbcc</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>d027d04c-6c86-425a-b187-7cff5a1ca68e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=025721361bdd91508c5143f3cc4bcbcc"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3d5721361bdd91508c5143f3cc4bcb16^id=025721361bdd91508c5143f3cc4bcbcc"/>
+    <sys_element_mapping action="delete_multiple" query="id=025721361bdd91508c5143f3cc4bcbcc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_item_record</field>
+        <id>025721361bdd91508c5143f3cc4bcbcc</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>8a5721361bdd91508c5143f3cc4bcbcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:32</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</table>
+        <value>{{5d8a3086-7f55-4c76-a845-1454901b9512.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>request_record</field>
+        <id>025721361bdd91508c5143f3cc4bcbcc</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>4e5721361bdd91508c5143f3cc4bcbcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:32</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</table>
+        <value>{{e9a7219f-af7a-4c56-a4e5-6fc8a42ca300.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>task_record</field>
+        <id>025721361bdd91508c5143f3cc4bcbcc</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:40:03</sys_created_on>
+        <sys_id>88680d341be9159062e50ed2cd4bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</table>
+        <value>{{e4c72116-3934-4246-a469-8b5512056240.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=025721361bdd91508c5143f3cc4bcbcc"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=025721361bdd91508c5143f3cc4bcbcc"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8dd6c9fc1ba9159062e50ed2cd4bcb0c</block>
+        <comment>Set short description</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>short_description</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>42d64dfc1ba9159062e50ed2cd4bcbec</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>b516560d-619a-4fec-9ee4-9bb15a6993a6</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=42d64dfc1ba9159062e50ed2cd4bcbec"/>
+    <sys_element_mapping action="delete_multiple" query="id=42d64dfc1ba9159062e50ed2cd4bcbec"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>short_description</field>
+        <id>42d64dfc1ba9159062e50ed2cd4bcbec</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>46d64dfc1ba9159062e50ed2cd4bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_3d5721361bdd91508c5143f3cc4bcb16</table>
+        <value>APi Connect Record Validation Failure - {{subflow.type_of_failure}} - {{subflow.failure_record_display_value}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16^id=42d64dfc1ba9159062e50ed2cd4bcbec"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=42d64dfc1ba9159062e50ed2cd4bcbec"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=42d64dfc1ba9159062e50ed2cd4bcbec"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">45d6c9fc1ba9159062e50ed2cd4bcb22</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>42d64dfc1ba9159062e50ed2cd4bcbf0</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>810b6343-a5dc-4a06-9dae-3e25e890cb23</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=42d64dfc1ba9159062e50ed2cd4bcbf0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>42d64dfc1ba9159062e50ed2cd4bcbf0</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>86d64dfc1ba9159062e50ed2cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <value>existing records exist</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3d5721361bdd91508c5143f3cc4bcb16^id=42d64dfc1ba9159062e50ed2cd4bcbf0"/>
+    <sys_element_mapping action="delete_multiple" query="id=42d64dfc1ba9159062e50ed2cd4bcbf0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>42d64dfc1ba9159062e50ed2cd4bcbf0</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>06d64dfc1ba9159062e50ed2cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{07c4bafe-f915-431b-98bd-8aa0f65f6e92.error_message}}=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>42d64dfc1ba9159062e50ed2cd4bcbf0</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>42d64dfc1ba9159062e50ed2cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:22</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16^id=42d64dfc1ba9159062e50ed2cd4bcbf0"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=42d64dfc1ba9159062e50ed2cd4bcbf0"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=42d64dfc1ba9159062e50ed2cd4bcbf0"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">c5d6c9fc1ba9159062e50ed2cd4bcb26</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>810b6343-a5dc-4a06-9dae-3e25e890cb23</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:22</sys_created_on>
+        <sys_id>42d64dfc1ba9159062e50ed2cd4bcbf4</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:04</sys_updated_on>
+        <ui_id>491a63b6-35a4-4474-ab5e-da37e24bf8c1</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=42d64dfc1ba9159062e50ed2cd4bcbf4"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_3d5721361bdd91508c5143f3cc4bcb16^id=42d64dfc1ba9159062e50ed2cd4bcbf4"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16^id=42d64dfc1ba9159062e50ed2cd4bcbf4"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=42d64dfc1ba9159062e50ed2cd4bcbf4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=42d64dfc1ba9159062e50ed2cd4bcbf4"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN71d64dfc1ba9159062e50ed2cd4bcbd2"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=a3b6eaad-d765-444c-ac0e-508dd7e5d8de</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>short_description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Short Description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Validation Failure RITM, REQ, and Task">3d5721361bdd91508c5143f3cc4bcb16</model>
+        <model_id>3d5721361bdd91508c5143f3cc4bcb16</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:21</sys_created_on>
+        <sys_id>71d64dfc1ba9159062e50ed2cd4bcbd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Short Description</sys_name>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_71d64dfc1ba9159062e50ed2cd4bcbd2</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN4e5721361bdd91508c5143f3cc4bcb64,825721361bdd91508c5143f3cc4bcb7c,f0511a7e1b55d1508c5143f3cc4bcb31,f5d64dfc1ba9159062e50ed2cd4bcbaa"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>type_of_failure</element>
+        <help/>
+        <hint/>
+        <label>Type of failure</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>4e5721361bdd91508c5143f3cc4bcb64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>failure_instructions</element>
+        <help/>
+        <hint/>
+        <label>Failure instructions</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>825721361bdd91508c5143f3cc4bcb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>related_link</element>
+        <help/>
+        <hint/>
+        <label>Related Link</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 18:50:56</sys_created_on>
+        <sys_id>f0511a7e1b55d1508c5143f3cc4bcb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 18:50:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>failure_record_display_value</element>
+        <help/>
+        <hint/>
+        <label>Failure Record Display Value</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:33:21</sys_created_on>
+        <sys_id>f5d64dfc1ba9159062e50ed2cd4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:33:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16^sys_idNOT IN025721361bdd91508c5143f3cc4bcbb9,bf58c9341be9159062e50ed2cd4bcbaa,ce5721361bdd91508c5143f3cc4bcba7"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item_record</element>
+        <help/>
+        <hint/>
+        <label>Request Item Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:32</sys_created_on>
+        <sys_id>025721361bdd91508c5143f3cc4bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>task_record</element>
+        <help/>
+        <hint/>
+        <label>Task Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-23 18:40:03</sys_created_on>
+        <sys_id>bf58c9341be9159062e50ed2cd4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-23 18:40:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_record</element>
+        <help/>
+        <hint/>
+        <label>Request Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-17 15:47:31</sys_created_on>
+        <sys_id>ce5721361bdd91508c5143f3cc4bcba7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-17 15:47:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3d5721361bdd91508c5143f3cc4bcb16"/>
+    <sys_hub_flow action="update">
+        <sys_id>8c0fb30e1b11dd108c5143f3cc4bcbff</sys_id>
+        <latest_snapshot>3d5721361bdd91508c5143f3cc4bcb16</latest_snapshot>
+    </sys_hub_flow>
+</record_update>
