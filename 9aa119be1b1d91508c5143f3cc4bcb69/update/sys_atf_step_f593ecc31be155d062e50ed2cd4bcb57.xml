@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Answer the questions on the form as follows:
+Do you want to rollback to Fulfillment? = No</description>
+        <display_name>Set Variable Values</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>11</order>
+        <snapshot/>
+        <step_config display_value="Set Variable Values">323ca6e1c3b2220076173b0ac3d3aec1</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2022-08-30 15:45:53</sys_created_on>
+        <sys_id>f593ecc31be155d062e50ed2cd4bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Variable Values</sys_name>
+        <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
+        <sys_update_name>sys_atf_step_f593ecc31be155d062e50ed2cd4bcb57</sys_update_name>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2022-08-30 15:45:53</sys_updated_on>
+        <table/>
+        <test display_value="TC - 174 - Generic Request - Validate Survey Notification - SP">7b7f97031bed7c908c5143f3cc4bcb74</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=f593ecc31be155d062e50ed2cd4bcb57"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f593ecc31be155d062e50ed2cd4bcb57</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2022-08-30 15:45:54</sys_created_on>
+        <sys_id>45a3e0071be155d062e50ed2cd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2022-08-30 15:45:54</sys_updated_on>
+        <value>fc621883db810010a81ff36f299619ec</value>
+        <variable display_value="Item">571e6a25c3b2220076173b0ac3d3ae46</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f593ecc31be155d062e50ed2cd4bcb57</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2022-08-30 15:45:54</sys_created_on>
+        <sys_id>8da3e0071be155d062e50ed2cd4bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2022-08-30 15:45:54</sys_updated_on>
+        <value>IO:7f61e3f1dbd10010a81ff36f29961966=no^EQ</value>
+        <variable display_value="Variable Values">346eea25c3b2220076173b0ac3d3ae8b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_323ca6e1c3b2220076173b0ac3d3aec1^id=f593ecc31be155d062e50ed2cd4bcb57"/>
+</record_update>
