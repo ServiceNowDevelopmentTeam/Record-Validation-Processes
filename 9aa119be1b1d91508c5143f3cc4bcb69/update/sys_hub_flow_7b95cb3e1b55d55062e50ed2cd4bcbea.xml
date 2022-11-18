@@ -6,7 +6,6 @@
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build>glide-rome-06-23-2021__patch9a-06-15-2022_07-15-2022_1637.zip</compiler_build>
         <copied_from/>
         <copied_from_name/>
         <description/>
@@ -16,6 +15,7 @@
         <name>Validate Location</name>
         <natlang/>
         <outputs/>
+        <pre_compiled>false</pre_compiled>
         <remote_trigger_id/>
         <run_as>system</run_as>
         <run_with_roles/>
@@ -29,15 +29,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7b95cb3e1b55d55062e50ed2cd4bcbea</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Validate Location</sys_name>
         <sys_overrides/>
         <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
         <sys_policy/>
         <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
         <sys_update_name>sys_hub_flow_7b95cb3e1b55d55062e50ed2cd4bcbea</sys_update_name>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-24 16:19:28</sys_updated_on>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2022-08-30 15:37:26</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
@@ -90,6 +90,7 @@
         <element>location_record</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -136,6 +137,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -172,6 +174,7 @@
         <element>valid_location</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -218,6 +221,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -230,7 +234,6 @@
         <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
         <action_type_parent/>
         <comment>Look up existing tasks for validation failure.</comment>
-        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <order>1</order>
@@ -306,7 +309,6 @@
         <action_type display_value="Get System Property">eaddde611b16c59062e50ed2cd4bcb83</action_type>
         <action_type_parent/>
         <comment>Get instance name for URL</comment>
-        <compiled_snapshot>eaddde611b16c59062e50ed2cd4bcb83</compiled_snapshot>
         <display_text/>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <order>21</order>
@@ -345,7 +347,6 @@
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent/>
         <comment>Look up fresh copy of location</comment>
-        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
         <display_text/>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <order>4</order>
@@ -797,30 +798,6 @@ Validation failure reason(s):
         <value>{{subflow.location_record.name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow</field>
-        <id>492c85381b2d159062e50ed2cd4bcb03</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-23 18:56:31</sys_created_on>
-        <sys_id>092c85381b2d159062e50ed2cd4bcb34</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-23 18:56:31</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow_template</field>
-        <id>492c85381b2d159062e50ed2cd4bcb03</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-23 18:56:31</sys_created_on>
-        <sys_id>812c85381b2d159062e50ed2cd4bcb34</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-23 18:56:31</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>related_link</field>
         <id>492c85381b2d159062e50ed2cd4bcb03</id>
         <sys_created_by>Terry.Lillo</sys_created_by>
@@ -842,18 +819,6 @@ Validation failure reason(s):
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2022-08-23 18:56:31</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_ext_input_492c85381b2d159062e50ed2cd4bcb03</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>492c85381b2d159062e50ed2cd4bcb03</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-23 18:56:31</sys_created_on>
-        <sys_id>452c85381b2d159062e50ed2cd4bcb34</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-23 18:56:31</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_7b95cb3e1b55d55062e50ed2cd4bcbea^id=492c85381b2d159062e50ed2cd4bcb03"/>
@@ -891,6 +856,7 @@ Validation failure reason(s):
         <element>related_link</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -937,6 +903,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -972,6 +939,7 @@ Validation failure reason(s):
         <element>failure_record_display_value</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1018,6 +986,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1053,6 +1022,7 @@ Validation failure reason(s):
         <element>type_of_failure</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1099,6 +1069,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1134,6 +1105,7 @@ Validation failure reason(s):
         <element>failure_instructions</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1180,6 +1152,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1490,30 +1463,6 @@ State is empty</value>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=6c40d33e1b95d55062e50ed2cd4bcbe0"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow</field>
-        <id>6c40d33e1b95d55062e50ed2cd4bcbe0</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-17 23:25:53</sys_created_on>
-        <sys_id>6040d33e1b95d55062e50ed2cd4bcbf3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-17 23:25:53</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow_template</field>
-        <id>6c40d33e1b95d55062e50ed2cd4bcbe0</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-17 23:25:53</sys_created_on>
-        <sys_id>e840d33e1b95d55062e50ed2cd4bcbf2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-17 23:25:53</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>location_record</field>
         <id>6c40d33e1b95d55062e50ed2cd4bcbe0</id>
         <sys_created_by>Terry.Lillo</sys_created_by>
@@ -1524,18 +1473,6 @@ State is empty</value>
         <sys_updated_on>2022-08-17 23:25:53</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_ext_input_6c40d33e1b95d55062e50ed2cd4bcbe0</table>
         <value>{{subflow.location_record}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>6c40d33e1b95d55062e50ed2cd4bcbe0</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-17 23:25:53</sys_created_on>
-        <sys_id>ac40d33e1b95d55062e50ed2cd4bcbf2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-17 23:25:53</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_7b95cb3e1b55d55062e50ed2cd4bcbea^id=6c40d33e1b95d55062e50ed2cd4bcbe0"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256^id=6c40d33e1b95d55062e50ed2cd4bcbe0"/>
@@ -1572,6 +1509,7 @@ State is empty</value>
         <element>location_record</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1618,6 +1556,7 @@ State is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -1820,30 +1759,6 @@ Phone number is empty</value>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=82a22a831b1155508c5143f3cc4bcb32"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow</field>
-        <id>82a22a831b1155508c5143f3cc4bcb32</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-18 14:45:53</sys_created_on>
-        <sys_id>34d2ee831b1155508c5143f3cc4bcb83</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-18 14:45:53</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow_template</field>
-        <id>82a22a831b1155508c5143f3cc4bcb32</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-18 14:45:09</sys_created_on>
-        <sys_id>cea22a831b1155508c5143f3cc4bcb59</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-18 14:45:09</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>ritm</field>
         <id>82a22a831b1155508c5143f3cc4bcb32</id>
         <sys_created_by>Terry.Lillo</sys_created_by>
@@ -1854,18 +1769,6 @@ Phone number is empty</value>
         <sys_updated_on>2022-08-18 14:45:09</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_ext_input_82a22a831b1155508c5143f3cc4bcb32</table>
         <value>{{c1cb55c1-2236-4ed2-9e55-a3193596da46.item.request_item}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>82a22a831b1155508c5143f3cc4bcb32</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-18 14:45:53</sys_created_on>
-        <sys_id>70d2ee831b1155508c5143f3cc4bcb83</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-18 14:45:53</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_7b95cb3e1b55d55062e50ed2cd4bcbea^id=82a22a831b1155508c5143f3cc4bcb32"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256^id=82a22a831b1155508c5143f3cc4bcb32"/>
@@ -1902,6 +1805,7 @@ Phone number is empty</value>
         <element>ritm</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -1948,6 +1852,7 @@ Phone number is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2555,6 +2460,7 @@ Address 1 is empty</value>
         <element>validation_fail_description_start</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2601,6 +2507,7 @@ Address 1 is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2636,6 +2543,7 @@ Address 1 is empty</value>
         <element>invalid_reason</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2682,6 +2590,7 @@ Address 1 is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2700,11 +2609,11 @@ Address 1 is empty</value>
         <sys_created_on>2022-08-17 22:39:59</sys_created_on>
         <sys_id>44c5c77e1b55d55062e50ed2cd4bcb86</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Location Record</sys_name>
         <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
         <sys_policy/>
         <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_7b95cb3e1b55d55062e50ed2cd4bcbea_location_record_en</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2022-08-17 22:39:59</sys_updated_on>
         <url/>
@@ -2725,11 +2634,11 @@ Address 1 is empty</value>
         <sys_created_on>2022-08-17 22:41:05</sys_created_on>
         <sys_id>c8068f7e1b55d55062e50ed2cd4bcb15</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Valid Location</sys_name>
         <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
         <sys_policy/>
         <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_7b95cb3e1b55d55062e50ed2cd4bcbea_valid_location_en</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2022-08-17 22:41:05</sys_updated_on>
         <url/>
@@ -2842,6 +2751,7 @@ Address 1 is empty</value>
         <element>location_record</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2888,6 +2798,7 @@ Address 1 is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2924,6 +2835,7 @@ Address 1 is empty</value>
         <element>valid_location</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -2970,6 +2882,7 @@ Address 1 is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -2982,7 +2895,6 @@ Address 1 is empty</value>
         <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
         <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
         <comment>Look up existing tasks for validation failure.</comment>
-        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <order>1</order>
@@ -3045,7 +2957,6 @@ Address 1 is empty</value>
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
         <comment>Look up fresh copy of location</comment>
-        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
         <display_text/>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <order>4</order>
@@ -3133,7 +3044,6 @@ Address 1 is empty</value>
         <action_type display_value="Get System Property">eaddde611b16c59062e50ed2cd4bcb83</action_type>
         <action_type_parent display_value="Get System Property">1e5d56ed1bd2c59062e50ed2cd4bcb0a</action_type_parent>
         <comment>Get instance name for URL</comment>
-        <compiled_snapshot>eaddde611b16c59062e50ed2cd4bcb83</compiled_snapshot>
         <display_text/>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <order>21</order>
@@ -3608,30 +3518,6 @@ Validation failure reason(s):
         <value>{{subflow.location_record.name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow</field>
-        <id>414c41781b2d159062e50ed2cd4bcbd8</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-23 18:57:04</sys_created_on>
-        <sys_id>894c81781b2d159062e50ed2cd4bcb45</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-23 18:57:04</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow_template</field>
-        <id>414c41781b2d159062e50ed2cd4bcbd8</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-23 18:57:04</sys_created_on>
-        <sys_id>054c81781b2d159062e50ed2cd4bcb45</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-23 18:57:04</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>related_link</field>
         <id>414c41781b2d159062e50ed2cd4bcbd8</id>
         <sys_created_by>Terry.Lillo</sys_created_by>
@@ -3653,18 +3539,6 @@ Validation failure reason(s):
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2022-08-23 18:57:04</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_ext_input_414c41781b2d159062e50ed2cd4bcbd8</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>414c41781b2d159062e50ed2cd4bcbd8</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-23 18:57:04</sys_created_on>
-        <sys_id>c54c81781b2d159062e50ed2cd4bcb45</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-23 18:57:04</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_1aef07fa1b95d55062e50ed2cd4bcba6^id=414c41781b2d159062e50ed2cd4bcbd8"/>
@@ -3702,6 +3576,7 @@ Validation failure reason(s):
         <element>related_link</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -3748,6 +3623,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -3783,6 +3659,7 @@ Validation failure reason(s):
         <element>failure_instructions</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -3829,6 +3706,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -3864,6 +3742,7 @@ Validation failure reason(s):
         <element>type_of_failure</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -3910,6 +3789,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -3945,6 +3825,7 @@ Validation failure reason(s):
         <element>failure_record_display_value</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -3991,6 +3872,7 @@ Validation failure reason(s):
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -4275,30 +4157,6 @@ State is empty</value>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=7ad2e2c31b1155508c5143f3cc4bcb05"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow</field>
-        <id>7ad2e2c31b1155508c5143f3cc4bcb05</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-18 14:46:01</sys_created_on>
-        <sys_id>b6d2e2c31b1155508c5143f3cc4bcb27</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-18 14:46:01</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow_template</field>
-        <id>7ad2e2c31b1155508c5143f3cc4bcb05</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-18 14:46:01</sys_created_on>
-        <sys_id>32d2e2c31b1155508c5143f3cc4bcb27</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-18 14:46:01</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>ritm</field>
         <id>7ad2e2c31b1155508c5143f3cc4bcb05</id>
         <sys_created_by>Terry.Lillo</sys_created_by>
@@ -4309,18 +4167,6 @@ State is empty</value>
         <sys_updated_on>2022-08-18 14:46:01</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_ext_input_7ad2e2c31b1155508c5143f3cc4bcb05</table>
         <value>{{c1cb55c1-2236-4ed2-9e55-a3193596da46.item.request_item}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>7ad2e2c31b1155508c5143f3cc4bcb05</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-18 14:46:01</sys_created_on>
-        <sys_id>f2d2e2c31b1155508c5143f3cc4bcb27</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-18 14:46:01</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_1aef07fa1b95d55062e50ed2cd4bcba6^id=7ad2e2c31b1155508c5143f3cc4bcb05"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256^id=7ad2e2c31b1155508c5143f3cc4bcb05"/>
@@ -4357,6 +4203,7 @@ State is empty</value>
         <element>ritm</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -4403,6 +4250,7 @@ State is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -4557,30 +4405,6 @@ State is empty</value>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=97425bfe1b95d55062e50ed2cd4bcb8a"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow</field>
-        <id>97425bfe1b95d55062e50ed2cd4bcb8a</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-17 23:34:49</sys_created_on>
-        <sys_id>53425bfe1b95d55062e50ed2cd4bcb9d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-17 23:34:49</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>flow_template</field>
-        <id>97425bfe1b95d55062e50ed2cd4bcb8a</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-17 23:34:49</sys_created_on>
-        <sys_id>db425bfe1b95d55062e50ed2cd4bcb9c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-17 23:34:49</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>location_record</field>
         <id>97425bfe1b95d55062e50ed2cd4bcb8a</id>
         <sys_created_by>Terry.Lillo</sys_created_by>
@@ -4591,18 +4415,6 @@ State is empty</value>
         <sys_updated_on>2022-08-17 23:34:49</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_ext_input_97425bfe1b95d55062e50ed2cd4bcb8a</table>
         <value>{{subflow.location_record}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>wait_for_completion</field>
-        <id>97425bfe1b95d55062e50ed2cd4bcb8a</id>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-17 23:34:49</sys_created_on>
-        <sys_id>9f425bfe1b95d55062e50ed2cd4bcb9c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-17 23:34:49</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_1aef07fa1b95d55062e50ed2cd4bcba6^id=97425bfe1b95d55062e50ed2cd4bcb8a"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_5ede711653223300414eddeeff7b1256^id=97425bfe1b95d55062e50ed2cd4bcb8a"/>
@@ -4639,6 +4451,7 @@ State is empty</value>
         <element>location_record</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -4685,6 +4498,7 @@ State is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -5293,6 +5107,7 @@ Phone number is empty</value>
         <element>validation_fail_description_start</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -5339,6 +5154,7 @@ Phone number is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -5374,6 +5190,7 @@ Phone number is empty</value>
         <element>invalid_reason</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -5420,6 +5237,7 @@ Phone number is empty</value>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -5438,11 +5256,11 @@ Phone number is empty</value>
         <sys_created_on>2022-08-17 23:24:22</sys_created_on>
         <sys_id>96ef07fa1b95d55062e50ed2cd4bcbbf</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Location Record</sys_name>
         <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
         <sys_policy/>
         <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_1aef07fa1b95d55062e50ed2cd4bcba6_location_record_en</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2022-08-17 23:24:22</sys_updated_on>
         <url/>
@@ -5463,19 +5281,20 @@ Phone number is empty</value>
         <sys_created_on>2022-08-17 23:24:23</sys_created_on>
         <sys_id>5eef07fa1b95d55062e50ed2cd4bcbd1</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Valid Location</sys_name>
         <sys_package display_value="Record Validation Processes" source="9aa119be1b1d91508c5143f3cc4bcb69">9aa119be1b1d91508c5143f3cc4bcb69</sys_package>
         <sys_policy/>
         <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_1aef07fa1b95d55062e50ed2cd4bcba6_valid_location_en</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2022-08-17 23:24:23</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_1aef07fa1b95d55062e50ed2cd4bcba6"/>
-    <sys_hub_flow action="update">
+    <sys_hub_flow action="UPDATE">
         <sys_id>7b95cb3e1b55d55062e50ed2cd4bcbea</sys_id>
         <latest_snapshot>1aef07fa1b95d55062e50ed2cd4bcba6</latest_snapshot>
+        <compiler_build>glide-rome-06-23-2021__patch9a-06-15-2022_07-15-2022_1637.zip</compiler_build>
     </sys_hub_flow>
 </record_update>

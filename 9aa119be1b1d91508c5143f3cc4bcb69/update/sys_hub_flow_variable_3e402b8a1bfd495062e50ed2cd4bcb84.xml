@@ -2,7 +2,6 @@
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
-        <array_denormalized>false</array_denormalized>
         <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=04cc31ed-51f2-4bca-90e5-e95fb9381883</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
@@ -30,6 +29,7 @@
         <element>catalog_item</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -54,21 +54,18 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_hub_flow_variable</sys_class_name>
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-02-22 17:00:44</sys_created_on>
-        <sys_id>3e402b8a1bfd495062e50ed2cd4bcb84</sys_id>
-        <sys_mod_count>2</sys_mod_count>
         <sys_name>Catalog Item</sys_name>
         <sys_package display_value="Cascading Approvals" source="22668e5c1b53b45062e50ed2cd4bcbf0">22668e5c1b53b45062e50ed2cd4bcbf0</sys_package>
         <sys_policy/>
         <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
         <sys_update_name>sys_hub_flow_variable_3e402b8a1bfd495062e50ed2cd4bcb84</sys_update_name>
-        <sys_updated_by>John.Schwab</sys_updated_by>
-        <sys_updated_on>2022-08-30 15:33:23</sys_updated_on>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-11-18 20:13:58</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -76,6 +73,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>

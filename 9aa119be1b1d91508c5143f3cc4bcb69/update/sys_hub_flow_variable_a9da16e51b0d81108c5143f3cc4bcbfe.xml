@@ -2,7 +2,6 @@
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
-        <array_denormalized>false</array_denormalized>
         <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d0674f0e-5f8b-4ec0-914a-d6cef37b8c8b</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
@@ -30,6 +29,7 @@
         <element>reason</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -54,14 +54,11 @@
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_hub_flow_variable</sys_class_name>
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-01-14 15:53:14</sys_created_on>
-        <sys_id>a9da16e51b0d81108c5143f3cc4bcbfe</sys_id>
-        <sys_mod_count>2</sys_mod_count>
         <sys_name>Reason</sys_name>
         <sys_package display_value="Global" source="global">global</sys_package>
         <sys_policy/>
@@ -76,6 +73,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
