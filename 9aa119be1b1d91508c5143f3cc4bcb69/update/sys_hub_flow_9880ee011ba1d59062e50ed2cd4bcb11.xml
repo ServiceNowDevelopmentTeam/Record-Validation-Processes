@@ -4,6 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from>361137b91bbac5108c5143f3cc4bcb12</copied_from>
@@ -37,7 +38,7 @@
         <sys_scope display_value="Record Validation Processes">9aa119be1b1d91508c5143f3cc4bcb69</sys_scope>
         <sys_update_name>sys_hub_flow_9880ee011ba1d59062e50ed2cd4bcb11</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-24 20:26:13</sys_updated_on>
+        <sys_updated_on>2022-11-21 22:17:25</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=9880ee011ba1d59062e50ed2cd4bcb11"/>
@@ -141,6 +142,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b31122811ba1d59062e50ed2cd4bcb04"/>
     <sys_hub_flow_output action="delete_multiple" query="model=9880ee011ba1d59062e50ed2cd4bcb11"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=9880ee011ba1d59062e50ed2cd4bcb11"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=9880ee011ba1d59062e50ed2cd4bcb11^sys_idNOT IN7080ee011ba1d59062e50ed2cd4bcbd5,bc80ee011ba1d59062e50ed2cd4bcbe1"/>
@@ -148,6 +150,7 @@
         <action_inputs/>
         <action_type display_value="Get System Property">eaddde611b16c59062e50ed2cd4bcb83</action_type>
         <action_type_parent display_value="Get System Property">1e5d56ed1bd2c59062e50ed2cd4bcb0a</action_type_parent>
+        <attributes/>
         <comment>Get instance name</comment>
         <display_text/>
         <flow display_value="Validate Department">9880ee011ba1d59062e50ed2cd4bcb11</flow>
@@ -186,6 +189,7 @@
         <action_inputs/>
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
         <comment>Get department record</comment>
         <display_text/>
         <flow display_value="Validate Department">9880ee011ba1d59062e50ed2cd4bcb11</flow>
@@ -245,6 +249,7 @@
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=bc80ee011ba1d59062e50ed2cd4bcbe1"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=9880ee011ba1d59062e50ed2cd4bcb11^sys_idNOT INdea322851ba1d59062e50ed2cd4bcb57"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Validate Department">9880ee011ba1d59062e50ed2cd4bcb11</flow>
@@ -380,6 +385,7 @@
     <sys_hub_input_scripts action="delete_multiple" query="instance=dea322851ba1d59062e50ed2cd4bcb57"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=9880ee011ba1d59062e50ed2cd4bcb11^sys_idNOT IN2480ee011ba1d59062e50ed2cd4bcb7c,9080ee011ba1d59062e50ed2cd4bcb63,a480ee011ba1d59062e50ed2cd4bcb78,b480ee011ba1d59062e50ed2cd4bcbc6,d080ee011ba1d59062e50ed2cd4bcb5f,e480ee011ba1d59062e50ed2cd4bcb7f,e880ee011ba1d59062e50ed2cd4bcbbb"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">3cadc53c1b2d159062e50ed2cd4bcb36</block>
         <comment>Set related URL</comment>
         <connected_to/>
@@ -426,6 +432,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=2480ee011ba1d59062e50ed2cd4bcb7c"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=2480ee011ba1d59062e50ed2cd4bcb7c"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">08d3f7751bfac5108c5143f3cc4bcbd4</block>
         <comment>Add to invalid reason</comment>
         <connected_to/>
@@ -473,6 +480,7 @@ Department does not have company</value>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9080ee011ba1d59062e50ed2cd4bcb63"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=9080ee011ba1d59062e50ed2cd4bcb63"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">48d3f7751bfac5108c5143f3cc4bcbde</block>
         <comment/>
         <connected_to/>
@@ -546,6 +554,7 @@ Department does not have company</value>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=a480ee011ba1d59062e50ed2cd4bcb78"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=a480ee011ba1d59062e50ed2cd4bcb78"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">b5fc81f81b2d159062e50ed2cd4bcbe4</block>
         <comment/>
         <connected_to/>
@@ -619,6 +628,7 @@ Department does not have company</value>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=b480ee011ba1d59062e50ed2cd4bcbc6"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=b480ee011ba1d59062e50ed2cd4bcbc6"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">8cd3f7751bfac5108c5143f3cc4bcbce</block>
         <comment/>
         <connected_to/>
@@ -692,6 +702,7 @@ Department does not have company</value>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d080ee011ba1d59062e50ed2cd4bcb5f"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=d080ee011ba1d59062e50ed2cd4bcb5f"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">448350201ba19d508c5143f3cc4bcb3b</block>
         <comment>Create validation failure REQ, RITM, and task</comment>
         <connected_to/>
@@ -1071,6 +1082,7 @@ Invalid Reason(s):
     </sys_hub_flow_logic_ext_input>
     <sys_hub_input_scripts action="delete_multiple" query="instance=e480ee011ba1d59062e50ed2cd4bcb7f"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">48351ce81ba19d508c5143f3cc4bcb8d</block>
         <comment>Set related RITM to generated RITM</comment>
         <connected_to/>
@@ -1560,28 +1572,12 @@ Invalid Reason(s):
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_9880ee011ba1d59062e50ed2cd4bcb11"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_9880ee011ba1d59062e50ed2cd4bcb11"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_9880ee011ba1d59062e50ed2cd4bcb11"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9880ee011ba1d59062e50ed2cd4bcb11"/>
-    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=9880ee011ba1d59062e50ed2cd4bcb11^sys_idNOT IN6663e2451ba1d59062e50ed2cd4bcb7f"/>
-    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>com.snc.process_flow.engine.ProcessPlan@273661</plan>
-        <plan_id display_value="Validate Department">9880ee011ba1d59062e50ed2cd4bcb11</plan_id>
-        <snapshot>7563a2451ba1d59062e50ed2cd4bcb79</snapshot>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-24 19:56:18</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
-        <sys_id>6663e2451ba1d59062e50ed2cd4bcb7f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_overrides/>
-        <sys_scope/>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-24 19:57:30</sys_updated_on>
-    </sys_flow_subflow_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
@@ -1717,6 +1713,7 @@ Invalid Reason(s):
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7d63a2451ba1d59062e50ed2cd4bcb7b"/>
     <sys_hub_flow_output action="delete_multiple" query="model=7563a2451ba1d59062e50ed2cd4bcb79"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=7563a2451ba1d59062e50ed2cd4bcb79"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=7563a2451ba1d59062e50ed2cd4bcb79^sys_idNOT IN9263e2451ba1d59062e50ed2cd4bcb2e,de63e2451ba1d59062e50ed2cd4bcb22"/>
@@ -1725,6 +1722,7 @@ Invalid Reason(s):
         <action_inputs/>
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
         <comment>Get department record</comment>
         <display_text/>
         <flow display_value="Validate Department">7563a2451ba1d59062e50ed2cd4bcb79</flow>
@@ -1786,6 +1784,7 @@ Invalid Reason(s):
         <action_inputs/>
         <action_type display_value="Get System Property">eaddde611b16c59062e50ed2cd4bcb83</action_type>
         <action_type_parent display_value="Get System Property">1e5d56ed1bd2c59062e50ed2cd4bcb0a</action_type_parent>
+        <attributes/>
         <comment>Get instance name</comment>
         <display_text/>
         <flow display_value="Validate Department">7563a2451ba1d59062e50ed2cd4bcb79</flow>
@@ -1821,6 +1820,7 @@ Invalid Reason(s):
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=de63e2451ba1d59062e50ed2cd4bcb22"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=7563a2451ba1d59062e50ed2cd4bcb79^sys_idNOT INdfa362851ba1d59062e50ed2cd4bcbe6"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Validate Department">7563a2451ba1d59062e50ed2cd4bcb79</flow>
@@ -1956,6 +1956,7 @@ Invalid Reason(s):
     <sys_hub_input_scripts action="delete_multiple" query="instance=dfa362851ba1d59062e50ed2cd4bcbe6"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=7563a2451ba1d59062e50ed2cd4bcb79^sys_idNOT IN0663a2451ba1d59062e50ed2cd4bcbd3,1a63e2451ba1d59062e50ed2cd4bcb17,4263a2451ba1d59062e50ed2cd4bcbd0,8e63a2451ba1d59062e50ed2cd4bcbc2,9263e2451ba1d59062e50ed2cd4bcb14,c263a2451ba1d59062e50ed2cd4bcbc8,c263a2451ba1d59062e50ed2cd4bcbcc"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">448350201ba19d508c5143f3cc4bcb3b</block>
         <comment>Create validation failure REQ, RITM, and task</comment>
         <connected_to/>
@@ -2335,6 +2336,7 @@ Invalid Reason(s):
     </sys_hub_flow_logic_ext_input>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0663a2451ba1d59062e50ed2cd4bcbd3"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">b5fc81f81b2d159062e50ed2cd4bcbe4</block>
         <comment/>
         <connected_to/>
@@ -2408,6 +2410,7 @@ Invalid Reason(s):
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1a63e2451ba1d59062e50ed2cd4bcb17"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=1a63e2451ba1d59062e50ed2cd4bcb17"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">3cadc53c1b2d159062e50ed2cd4bcb36</block>
         <comment>Set related URL</comment>
         <connected_to/>
@@ -2454,6 +2457,7 @@ Invalid Reason(s):
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4263a2451ba1d59062e50ed2cd4bcbd0"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=4263a2451ba1d59062e50ed2cd4bcbd0"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">8cd3f7751bfac5108c5143f3cc4bcbce</block>
         <comment/>
         <connected_to/>
@@ -2527,6 +2531,7 @@ Invalid Reason(s):
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8e63a2451ba1d59062e50ed2cd4bcbc2"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=8e63a2451ba1d59062e50ed2cd4bcbc2"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">48351ce81ba19d508c5143f3cc4bcb8d</block>
         <comment>Set related RITM to generated RITM</comment>
         <connected_to/>
@@ -2573,6 +2578,7 @@ Invalid Reason(s):
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9263e2451ba1d59062e50ed2cd4bcb14"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=9263e2451ba1d59062e50ed2cd4bcb14"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">08d3f7751bfac5108c5143f3cc4bcbd4</block>
         <comment>Add to invalid reason</comment>
         <connected_to/>
@@ -2620,6 +2626,7 @@ Department does not have company</value>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c263a2451ba1d59062e50ed2cd4bcbc8"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=c263a2451ba1d59062e50ed2cd4bcbc8"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">48d3f7751bfac5108c5143f3cc4bcbde</block>
         <comment/>
         <connected_to/>
@@ -3141,4 +3148,21 @@ Department does not have company</value>
         <latest_snapshot>7563a2451ba1d59062e50ed2cd4bcb79</latest_snapshot>
         <compiler_build>glide-rome-06-23-2021__patch9-05-12-2022_05-18-2022_0922.zip</compiler_build>
     </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=9880ee011ba1d59062e50ed2cd4bcb11"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=9880ee011ba1d59062e50ed2cd4bcb11^sys_idNOT IN6663e2451ba1d59062e50ed2cd4bcb7f"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@273661</plan>
+        <plan_id display_value="Validate Department">9880ee011ba1d59062e50ed2cd4bcb11</plan_id>
+        <snapshot>7563a2451ba1d59062e50ed2cd4bcb79</snapshot>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-24 19:56:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6663e2451ba1d59062e50ed2cd4bcb7f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-24 19:57:30</sys_updated_on>
+    </sys_flow_subflow_plan>
 </record_update>
