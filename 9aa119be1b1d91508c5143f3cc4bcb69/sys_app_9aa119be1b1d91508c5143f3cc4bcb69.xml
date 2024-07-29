@@ -23,7 +23,7 @@
         <scoped_administration>false</scoped_administration>
         <short_description>Fixes forMissing comment on REQ where validation fails on an REQ approval.Missing comment on INC for linking to agent workspace to complete playbooks.</short_description>
         <source>9aa119be1b1d91508c5143f3cc4bcb69</source>
-        <store_correlation_id>REPOAPP0001337877</store_correlation_id>
+        <store_correlation_id>REPOAPP0001374043</store_correlation_id>
         <store_url/>
         <subscription_entitlement/>
         <sys_class_name>sys_app</sys_class_name>
@@ -31,15 +31,15 @@
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-09-22 20:32:32</sys_created_on>
         <sys_id>9aa119be1b1d91508c5143f3cc4bcb69</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2024-06-19 17:12:57</sys_updated_on>
+        <sys_updated_on>2024-07-29 19:58:27</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor>API Group Inc</vendor>
         <vendor_prefix/>
-        <version>1.0.7</version>
+        <version>1.0.8</version>
     </sys_app>
 </record_update>
