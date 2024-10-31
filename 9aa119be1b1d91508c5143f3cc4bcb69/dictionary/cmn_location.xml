@@ -4,6 +4,7 @@
         <element label="Company" mandatory="true" max_length="32" name="company" reference="core_company" type="reference"/>
         <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
         <element label="State / Province" mandatory="true" max_length="40" name="state" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.u_address_1.toString();  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Street" max_length="255" name="street" read_only="true" type="multi_two_lines" virtual="true"/>
         <element label="Address 1" mandatory="true" max_length="35" name="u_address_1" type="string"/>
         <element label="Address 2" max_length="35" name="u_address_2" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Branch/Department Number" mandatory="true" max_length="40" name="u_department_number" type="string"/>
