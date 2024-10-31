@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="all_tables.text_index_translations=true,kagami_csindex_enabled=true" db_object_id="1c74a8231b211010e7004229bc4bcb29" label="Location" max_length="40" name="cmn_location" text_index="true" type="collection">
+        <element label="City" mandatory="true" max_length="40" name="city" type="string"/>
+        <element label="Company" mandatory="true" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="State / Province" mandatory="true" max_length="40" name="state" type="string"/>
+        <element label="Address 1" mandatory="true" max_length="35" name="u_address_1" type="string"/>
+        <element label="Address 2" max_length="35" name="u_address_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Branch/Department Number" mandatory="true" max_length="40" name="u_department_number" type="string"/>
+        <element label="Zip / Postal Code" mandatory="true" max_length="40" name="zip" type="string"/>
+        <index name="index">
+            <element name="company"/>
+        </index>
+        <index name="index2">
+            <element name="name"/>
+        </index>
+    </element>
+</database>

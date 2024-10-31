@@ -5,14 +5,19 @@
         <active>true</active>
         <annotation/>
         <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
         <internal_name>validate_location</internal_name>
         <label_cache>[{"name":"c1cb55c1-2236-4ed2-9e55-a3193596da46.item.request_item","label":"2➛Catalog Task Record➛Request item","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","parent_table_name":"sc_task","column_name":"request_item"},{"name":"86517197-f24c-4774-8e56-9ee348e0b48f.context","label":"3➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"c1cb55c1-2236-4ed2-9e55-a3193596da46.item","label":"2➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"13385534-b92b-43eb-93e0-3b803a038f28.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"13385534-b92b-43eb-93e0-3b803a038f28.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"13385534-b92b-43eb-93e0-3b803a038f28.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.Table","label":"1➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.Records","label":"1➛Catalog Task Records","reference":"sc_task","reference_display":"Catalog Task","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f0b84e0-1adf-49b8-8a30-e98bed01832a.valid_location","label":"24➛Valid Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f4995c10-4d95-4b89-b294-5a92d23076da"}},{"name":"824e701d-e3a7-4e26-adb3-9ffead31180d.context","label":"19➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"subflow.location_record.name","label":"Input➛Location Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"name"},{"name":"69b8169c-a1b4-408f-a61c-4eb2a4200800.__dont_treat_as_error__","label":"21➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"69b8169c-a1b4-408f-a61c-4eb2a4200800.__action_status__","label":"21➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDbeddde61cc16c5905427e8d0aeac0ca8","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"69b8169c-a1b4-408f-a61c-4eb2a4200800.property_value","label":"21➛Property Value","reference_display":"Property Value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d7029dba-bde6-4a06-814f-092b7f5fe49b"}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.context","label":"24➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"subflow.location_record.phone","label":"Input➛Location Record➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"subflow.location_record.city","label":"Input➛Location Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"subflow.location_record.u_address_1","label":"Input➛Location Record➛Address 1","reference":"","reference_display":"Address 1","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"u_address_1"},{"name":"subflow.location_record.company","label":"Input➛Location Record➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"cmn_location","column_name":"company"},{"name":"flow_variable.invalid_reason","label":"Flow Variables➛Invalid Reason","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cf2d1dfb-30ce-4126-883c-74f3d20560d9"}},{"name":"subflow.location_record.state","label":"Input➛Location Record➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"5819a052-7ce7-495f-ae8a-69498d4ba5b2.item","label":"8➛Items","reference_display":"Items","type":"document_id","base_type":"document_id","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"subflow.location_record.zip","label":"Input➛Location Record➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.Record","label":"4➛Location Record","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.Table","label":"4➛Location Table","reference":"cmn_location","reference_display":"Location","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.status","label":"4➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.error_message","label":"4➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.location_record.sys_id","label":"Input➛Location Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"cmn_location","column_name":"sys_id"},{"name":"4f0b84e0-1adf-49b8-8a30-e98bed01832a.context","label":"24➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"subflow.location_record","label":"Input➛Location Record","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"67d84be4-2459-4063-aae9-efe711c4743d","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_record","label":"24➛Request Record","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"768366d2-e1a2-4fc7-9af5-dc8b193b6a56"}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record","label":"24➛Request Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c4c02adb-7665-405c-bf2e-ed1cafc2bba9"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.Record","label":"24➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.Table","label":"24➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.__action_status__","label":"24➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.__dont_treat_as_error__","label":"24➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record.short_description","label":"24➛Request Item Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"short_description"},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record.description","label":"24➛Request Item Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"description"},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record.assignment_group","label":"24➛Request Item Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"assignment_group"},{"name":"flow_variable.validation_fail_description_start","label":"Flow Variables➛Validation Fail Description Start","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"56a595fd-f8de-4c29-940d-f6461f368644"}},{"name":"e754ec89-1600-49ca-877b-6b9bff2dcc70.context","label":"4➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.task_record","label":"24➛Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"38a81d6f-d548-45cb-9e42-419c01a9581f"}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.context","label":"22➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.request_record","label":"22➛Request Record","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"768366d2-e1a2-4fc7-9af5-dc8b193b6a56"}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.request_item_record","label":"22➛Request Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c4c02adb-7665-405c-bf2e-ed1cafc2bba9"}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.task_record","label":"22➛Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"38a81d6f-d548-45cb-9e42-419c01a9581f"}}]</label_cache>
         <master_snapshot>1aef07fa1b95d55062e50ed2cd4bcba6</master_snapshot>
+        <master_snapshot_digest/>
         <name>Validate Location</name>
         <natlang/>
         <outputs/>
@@ -24,6 +29,7 @@
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
         <status>published</status>
+        <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-08-17 22:39:25</sys_created_on>
@@ -40,11 +46,11 @@
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2024-02-05 22:02:31</sys_updated_on>
         <type>subflow</type>
+        <version>1</version>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_variable_value action="delete_multiple" query="document_key=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_7b95cb3e1b55d55062e50ed2cd4bcbea^id=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
-    <sys_hub_trigger_instance action="delete_multiple" query="flow=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=7b95cb3e1b55d55062e50ed2cd4bcbea^sys_idNOT IN7395cb3e1b55d55062e50ed2cd4bcbec"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -181,6 +187,7 @@
         <function_field>false</function_field>
         <help/>
         <hint/>
+        <internal_link/>
         <internal_type display_value="Reference">reference</internal_type>
         <label>Valid Location</label>
         <mandatory>false</mandatory>
@@ -230,6 +237,7 @@
     </sys_hub_flow_output>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0006477e1b55d55062e50ed2cd4bcb97"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=7b95cb3e1b55d55062e50ed2cd4bcbea^sys_idNOT IN2ba16e031b1155508c5143f3cc4bcbd3,58ee477a1b95d55062e50ed2cd4bcbc0,e9c903f21b95d55062e50ed2cd4bcb50"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
@@ -240,6 +248,7 @@
         <comment>Look up existing tasks for validation failure.</comment>
         <display_text/>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -316,6 +325,7 @@
         <comment>Get instance name for URL</comment>
         <display_text/>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
+        <generation_source/>
         <order>21</order>
         <parent_ui_id>fb004859-bd45-4b1c-a6c0-c42fc230ad6e</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -355,6 +365,7 @@
         <comment>Look up fresh copy of location</comment>
         <display_text/>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
+        <generation_source/>
         <order>4</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -435,7 +446,6 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=e9c903f21b95d55062e50ed2cd4bcb50"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=e9c903f21b95d55062e50ed2cd4bcb50"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=7b95cb3e1b55d55062e50ed2cd4bcbea^sys_idNOT IN012787fe1b55d55062e50ed2cd4bcb38,093943b21b95d55062e50ed2cd4bcbd8,0eb0df3e1b95d55062e50ed2cd4bcbca,1c7843721b95d55062e50ed2cd4bcbb8,42b0df3e1b95d55062e50ed2cd4bcbc8,492c85381b2d159062e50ed2cd4bcb03,4d2787fe1b55d55062e50ed2cd4bcb32,4d3943b21b95d55062e50ed2cd4bcbd1,4d3943b21b95d55062e50ed2cd4bcbd4,65c903f21b95d55062e50ed2cd4bcb58,6c40d33e1b95d55062e50ed2cd4bcbe0,7c6987b21b95d55062e50ed2cd4bcbce,813943b21b95d55062e50ed2cd4bcbce,82a22a831b1155508c5143f3cc4bcb32,8ab0df3e1b95d55062e50ed2cd4bcbc4,8ea22a831b1155508c5143f3cc4bcb2e,907843721b95d55062e50ed2cd4bcbc3,a0af4bba1b95d55062e50ed2cd4bcb7f,a9b0df3e1b95d55062e50ed2cd4bcb47,a9c903f21b95d55062e50ed2cd4bcb54,b06987b21b95d55062e50ed2cd4bcbcb,d47843721b95d55062e50ed2cd4bcbbc,d47843721b95d55062e50ed2cd4bcbbf,f42e0d7c1b2d159062e50ed2cd4bcbb0"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <attributes/>
@@ -450,6 +460,7 @@
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>9</order>
@@ -499,6 +510,7 @@ Company is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>17</order>
@@ -547,6 +559,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>27</order>
@@ -595,6 +608,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -670,6 +684,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
         <order>26</order>
@@ -706,6 +721,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Dynamic Flow">5ede711653223300414eddeeff7b1256</logic_definition>
         <order>22</order>
@@ -1182,6 +1198,7 @@ Validation failure reason(s):
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -1258,6 +1275,7 @@ Validation failure reason(s):
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>15</order>
@@ -1306,6 +1324,7 @@ State is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -1381,6 +1400,7 @@ State is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
         <order>7</order>
@@ -1417,6 +1437,7 @@ State is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Dynamic Flow">5ede711653223300414eddeeff7b1256</logic_definition>
         <order>24</order>
@@ -1592,6 +1613,7 @@ State is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>19</order>
@@ -1640,6 +1662,7 @@ Phone number is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -1716,6 +1739,7 @@ Phone number is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Dynamic Flow">5ede711653223300414eddeeff7b1256</logic_definition>
         <order>3</order>
@@ -1890,6 +1914,7 @@ Phone number is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>25</order>
@@ -1938,6 +1963,7 @@ Phone number is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
@@ -1988,6 +2014,7 @@ Phone number is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>13</order>
@@ -2036,6 +2063,7 @@ City is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -2111,6 +2139,7 @@ City is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>6</order>
@@ -2146,6 +2175,7 @@ City is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -2221,6 +2251,7 @@ City is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -2297,6 +2328,7 @@ City is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>11</order>
@@ -2345,6 +2377,7 @@ Address 1 is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -2420,6 +2453,7 @@ Address 1 is empty</value>
         <flow display_value="Validate Location">7b95cb3e1b55d55062e50ed2cd4bcbea</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -2457,6 +2491,7 @@ Address 1 is empty</value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_7b95cb3e1b55d55062e50ed2cd4bcbea^id=f42e0d7c1b2d159062e50ed2cd4bcbb0"/>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f42e0d7c1b2d159062e50ed2cd4bcbb0"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=f42e0d7c1b2d159062e50ed2cd4bcbb0"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=7b95cb3e1b55d55062e50ed2cd4bcbea"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=7b95cb3e1b55d55062e50ed2cd4bcbea^sys_idNOT IN27a16e031b1155508c5143f3cc4bcbc3,84864bbe1b55d55062e50ed2cd4bcb30"/>
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
@@ -2681,11 +2716,13 @@ Address 1 is empty</value>
         <active>true</active>
         <annotation/>
         <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
         <copied_from_name/>
         <description/>
+        <flow_priority/>
         <internal_name>validate_location</internal_name>
         <label_cache>[{"name":"c1cb55c1-2236-4ed2-9e55-a3193596da46.item.request_item","label":"2➛Catalog Task Record➛Request item","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","parent_table_name":"sc_task","column_name":"request_item"},{"name":"86517197-f24c-4774-8e56-9ee348e0b48f.context","label":"3➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"c1cb55c1-2236-4ed2-9e55-a3193596da46.item","label":"2➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"13385534-b92b-43eb-93e0-3b803a038f28.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"13385534-b92b-43eb-93e0-3b803a038f28.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"13385534-b92b-43eb-93e0-3b803a038f28.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.Table","label":"1➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cfa8cb22-c4e4-4061-8e28-23f1eb28b1eb.Records","label":"1➛Catalog Task Records","reference":"sc_task","reference_display":"Catalog Task","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f0b84e0-1adf-49b8-8a30-e98bed01832a.valid_location","label":"24➛Valid Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f4995c10-4d95-4b89-b294-5a92d23076da"}},{"name":"824e701d-e3a7-4e26-adb3-9ffead31180d.context","label":"19➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"subflow.location_record.name","label":"Input➛Location Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"name"},{"name":"69b8169c-a1b4-408f-a61c-4eb2a4200800.__dont_treat_as_error__","label":"21➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"69b8169c-a1b4-408f-a61c-4eb2a4200800.__action_status__","label":"21➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDbeddde61cc16c5905427e8d0aeac0ca8","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"69b8169c-a1b4-408f-a61c-4eb2a4200800.property_value","label":"21➛Property Value","reference_display":"Property Value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d7029dba-bde6-4a06-814f-092b7f5fe49b"}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.context","label":"24➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"subflow.location_record.phone","label":"Input➛Location Record➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"subflow.location_record.city","label":"Input➛Location Record➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"subflow.location_record.u_address_1","label":"Input➛Location Record➛Address 1","reference":"","reference_display":"Address 1","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"u_address_1"},{"name":"subflow.location_record.company","label":"Input➛Location Record➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"cmn_location","column_name":"company"},{"name":"flow_variable.invalid_reason","label":"Flow Variables➛Invalid Reason","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cf2d1dfb-30ce-4126-883c-74f3d20560d9"}},{"name":"subflow.location_record.state","label":"Input➛Location Record➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"5819a052-7ce7-495f-ae8a-69498d4ba5b2.item","label":"8➛Items","reference_display":"Items","type":"document_id","base_type":"document_id","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"subflow.location_record.zip","label":"Input➛Location Record➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.Record","label":"4➛Location Record","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.Table","label":"4➛Location Table","reference":"cmn_location","reference_display":"Location","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.status","label":"4➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.error_message","label":"4➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7a1d82e3-6de7-4793-b211-28b6398744e1.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.location_record.sys_id","label":"Input➛Location Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"cmn_location","column_name":"sys_id"},{"name":"4f0b84e0-1adf-49b8-8a30-e98bed01832a.context","label":"24➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"subflow.location_record","label":"Input➛Location Record","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"67d84be4-2459-4063-aae9-efe711c4743d","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_record","label":"24➛Request Record","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"768366d2-e1a2-4fc7-9af5-dc8b193b6a56"}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record","label":"24➛Request Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c4c02adb-7665-405c-bf2e-ed1cafc2bba9"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.Record","label":"24➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.Table","label":"24➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.__action_status__","label":"24➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7e70886d-7832-41e3-b1be-6e8ae571086e.__dont_treat_as_error__","label":"24➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record.short_description","label":"24➛Request Item Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"short_description"},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record.description","label":"24➛Request Item Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"description"},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.request_item_record.assignment_group","label":"24➛Request Item Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"assignment_group"},{"name":"flow_variable.validation_fail_description_start","label":"Flow Variables➛Validation Fail Description Start","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"56a595fd-f8de-4c29-940d-f6461f368644"}},{"name":"e754ec89-1600-49ca-877b-6b9bff2dcc70.context","label":"4➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"7c9fe1d7-5cda-4985-808a-7f52051ca8b8.task_record","label":"24➛Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"38a81d6f-d548-45cb-9e42-419c01a9581f"}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.context","label":"22➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.request_record","label":"22➛Request Record","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"768366d2-e1a2-4fc7-9af5-dc8b193b6a56"}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.request_item_record","label":"22➛Request Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c4c02adb-7665-405c-bf2e-ed1cafc2bba9"}},{"name":"c7ecb0d8-2a23-4531-9af9-c67c32cccb97.task_record","label":"22➛Task Record","reference":"sc_task","reference_display":"Catalog Task","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"38a81d6f-d548-45cb-9e42-419c01a9581f"}}]</label_cache>
         <master>true</master>
@@ -2714,11 +2751,11 @@ Address 1 is empty</value>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
         <sys_updated_on>2022-08-24 16:19:23</sys_updated_on>
         <type>subflow</type>
+        <version>1</version>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_variable_value action="delete_multiple" query="document_key=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_1aef07fa1b95d55062e50ed2cd4bcba6^id=1aef07fa1b95d55062e50ed2cd4bcba6"/>
-    <sys_hub_trigger_instance action="delete_multiple" query="flow=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=1aef07fa1b95d55062e50ed2cd4bcba6^sys_idNOT IN5eef07fa1b95d55062e50ed2cd4bcba7"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -2855,6 +2892,7 @@ Address 1 is empty</value>
         <function_field>false</function_field>
         <help/>
         <hint/>
+        <internal_link/>
         <internal_type display_value="Reference">reference</internal_type>
         <label>Valid Location</label>
         <mandatory>false</mandatory>
@@ -2904,6 +2942,7 @@ Address 1 is empty</value>
     </sys_hub_flow_output>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=96ef07fa1b95d55062e50ed2cd4bcbc4"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=1aef07fa1b95d55062e50ed2cd4bcba6"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=1aef07fa1b95d55062e50ed2cd4bcba6^sys_idNOT IN2ad2a2c31b1155508c5143f3cc4bcbe9,7aef47fa1b95d55062e50ed2cd4bcb80,beef47fa1b95d55062e50ed2cd4bcb8a"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
@@ -2914,6 +2953,7 @@ Address 1 is empty</value>
         <comment>Look up existing tasks for validation failure.</comment>
         <display_text/>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -2977,6 +3017,7 @@ Address 1 is empty</value>
         <comment>Look up fresh copy of location</comment>
         <display_text/>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
+        <generation_source/>
         <order>4</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -3065,6 +3106,7 @@ Address 1 is empty</value>
         <comment>Get instance name for URL</comment>
         <display_text/>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
+        <generation_source/>
         <order>21</order>
         <parent_ui_id>fb004859-bd45-4b1c-a6c0-c42fc230ad6e</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -3095,7 +3137,6 @@ Address 1 is empty</value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_eaddde611b16c59062e50ed2cd4bcb83^id=beef47fa1b95d55062e50ed2cd4bcb8a"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=beef47fa1b95d55062e50ed2cd4bcb8a"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=beef47fa1b95d55062e50ed2cd4bcb8a"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=1aef07fa1b95d55062e50ed2cd4bcba6^sys_idNOT IN13425bfe1b95d55062e50ed2cd4bcba3,1b425bfe1b95d55062e50ed2cd4bcb9f,1f425bfe1b95d55062e50ed2cd4bcba5,26ef47fa1b95d55062e50ed2cd4bcb27,2aef47fa1b95d55062e50ed2cd4bcb40,2eef47fa1b95d55062e50ed2cd4bcb2a,414c41781b2d159062e50ed2cd4bcbd8,4f2e01bc1b2d159062e50ed2cd4bcb56,62ef47fa1b95d55062e50ed2cd4bcb31,6aef47fa1b95d55062e50ed2cd4bcb2d,7a425bfe1b95d55062e50ed2cd4bcb04,7ad2e2c31b1155508c5143f3cc4bcb05,96ef07fa1b95d55062e50ed2cd4bcbe1,97425bfe1b95d55062e50ed2cd4bcb8a,a6ef47fa1b95d55062e50ed2cd4bcb37,aeef47fa1b95d55062e50ed2cd4bcb33,b6d2e2c31b1155508c5143f3cc4bcb02,e2ef47fa1b95d55062e50ed2cd4bcb3a,e6ef07fa1b95d55062e50ed2cd4bcbe5,e6ef47fa1b95d55062e50ed2cd4bcb1d,e6ef47fa1b95d55062e50ed2cd4bcb24,eaef47fa1b95d55062e50ed2cd4bcb3d,eeef47fa1b95d55062e50ed2cd4bcb19,eeef47fa1b95d55062e50ed2cd4bcb20"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <attributes/>
@@ -3109,6 +3150,7 @@ Address 1 is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
         <order>26</order>
@@ -3144,6 +3186,7 @@ Address 1 is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>25</order>
@@ -3192,6 +3235,7 @@ Address 1 is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>27</order>
@@ -3240,6 +3284,7 @@ Address 1 is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -3315,6 +3360,7 @@ Address 1 is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -3391,6 +3437,7 @@ Address 1 is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>13</order>
@@ -3440,6 +3487,7 @@ City is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Dynamic Flow">5ede711653223300414eddeeff7b1256</logic_definition>
         <order>22</order>
@@ -3916,6 +3964,7 @@ Validation failure reason(s):
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -3966,6 +4015,7 @@ Validation failure reason(s):
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>15</order>
@@ -4014,6 +4064,7 @@ State is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -4089,6 +4140,7 @@ State is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>6</order>
@@ -4125,6 +4177,7 @@ State is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Dynamic Flow">5ede711653223300414eddeeff7b1256</logic_definition>
         <order>3</order>
@@ -4299,6 +4352,7 @@ State is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -4375,6 +4429,7 @@ State is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Dynamic Flow">5ede711653223300414eddeeff7b1256</logic_definition>
         <order>24</order>
@@ -4550,6 +4605,7 @@ State is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>17</order>
@@ -4598,6 +4654,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -4673,6 +4730,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
@@ -4722,6 +4780,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -4797,6 +4856,7 @@ Zip code is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
         <order>7</order>
@@ -4833,6 +4893,7 @@ Zip code is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>9</order>
@@ -4882,6 +4943,7 @@ Company is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>11</order>
@@ -4931,6 +4993,7 @@ Address 1 is empty</value>
         <flow_variable/>
         <flow_variable/>
         <flow_variables_assigned>invalid_reason</flow_variables_assigned>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
         <order>19</order>
@@ -4979,6 +5042,7 @@ Phone number is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -5054,6 +5118,7 @@ Phone number is empty</value>
         <flow display_value="Validate Location">1aef07fa1b95d55062e50ed2cd4bcba6</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -5117,6 +5182,7 @@ Phone number is empty</value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_1aef07fa1b95d55062e50ed2cd4bcba6^id=eeef47fa1b95d55062e50ed2cd4bcb20"/>
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=eeef47fa1b95d55062e50ed2cd4bcb20"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=eeef47fa1b95d55062e50ed2cd4bcb20"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=1aef07fa1b95d55062e50ed2cd4bcba6"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=1aef07fa1b95d55062e50ed2cd4bcba6^sys_idNOT IN26d2a2c31b1155508c5143f3cc4bcbd9,92ef07fa1b95d55062e50ed2cd4bcbda"/>
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
