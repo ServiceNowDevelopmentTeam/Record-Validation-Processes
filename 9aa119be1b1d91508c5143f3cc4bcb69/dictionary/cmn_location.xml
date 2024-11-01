@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="all_tables.text_index_translations=true,kagami_csindex_enabled=true" db_object_id="1c74a8231b211010e7004229bc4bcb29" label="Location" max_length="40" name="cmn_location" text_index="true" type="collection">
         <element label="City" mandatory="true" max_length="40" name="city" type="string"/>
-        <element label="Company" mandatory="true" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
         <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
         <element label="State / Province" mandatory="true" max_length="40" name="state" type="string"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.u_address_1.toString();  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Street" max_length="255" name="street" read_only="true" type="multi_two_lines" virtual="true"/>
